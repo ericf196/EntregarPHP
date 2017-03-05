@@ -99,7 +99,7 @@ $(".crud-submit").click(function(e){
             $("#create-item").find("input[name='cargo']").val('');
             getPageData();
             $(".modal").modal('hide');
-            toastr.success('Item Created Successfully.', 'Success Alert', {timeOut: 5000});
+            toastr.success('Fue creado con exito', 'Error al crear', {timeOut: 5000});
             manageData();
             
         });
@@ -123,7 +123,7 @@ $("body").on("click",".remove-item",function(){
         data:{id:id}
     }).done(function(data){
         c_obj.remove();
-        toastr.success('Item Deleted Successfully.', 'Success Alert', {timeOut: 5000});
+        toastr.success('Trabajador Borrado', 'Error al borrar', {timeOut: 5000});
         getPageData();
     });
     
@@ -188,10 +188,10 @@ $(".crud-submit-edit").click(function(e){
             console.log("Bloque 2");
             getPageData();
             $(".modal").modal('hide');
-            toastr.success('Item Updated Successfully.', 'Success Alert', {timeOut: 5000});
+            toastr.success('Se actualizo con exito.', 'Error al actualizar', {timeOut: 5000});
         });
     }else{
-        alert('You are missing title or description.')
+        alert('Error falta Campos')
     }
 
 });
